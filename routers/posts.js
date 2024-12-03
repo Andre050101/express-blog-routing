@@ -56,6 +56,7 @@ router.patch('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
     const id = parseInt(req.params.id);
     if (id >= 0 && id < posts.length) {
+        const deletedPost = posts.splice(id, 1);
         res.send(`Cancellazione del post con ID:${id}`);
     }
     else {
