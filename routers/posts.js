@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
     const id = parseInt(req.params.id);
     if (id >= 0 && id < posts.length) {
-        res.send(`Dettagli del post con ID:${id}`);
+        res.json(posts[id]);
     }
     else {
         res.status(404).json({
