@@ -5,7 +5,7 @@ const posts = require('../data/post'); //Importo array di post da path specifica
 //Crud:
 //Index (Tutti i post)
 router.get('/', (req, res) => {
-    res.send("Lista di tutti i post")
+    res.json(posts);
 });
 
 //Show (Mostra solo un post)
